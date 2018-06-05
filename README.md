@@ -9,7 +9,7 @@
 
 ## Usando
 ###### Instalando
-Todo os passos de instalação você [confere aqui](https://ninjashost.github.io/whmsonichoracerta/).
+Todo os passos de instalação você [confere aqui](https://msaulohenrique.github.io/whmsonichoracerta/).
 
 ###### Ativando
 1. Crie a playlist (ela não pode ser alterada futuramente)
@@ -31,4 +31,3 @@ Todo os passos de instalação você [confere aqui](https://ninjashost.github.io
 * [WHMSonic](https://whmsonic.com)
 * [cPanel](https://www.cpanel.com.br/)
 * [Portal do Host](https://www.portaldohost.com.br/)
-* [Ninjas Host](https://www.ninjashost.com.br/)
