@@ -30,9 +30,9 @@ include "/usr/local/cpanel/whostmgr/docroot/whmsonic/inc/dbs.php";
 include "/usr/local/cpanel/whostmgr/docroot/whmsonic/lng.php";
 include "/usr/local/cpanel/whostmgr/docroot/whmsonic/languages/$lang.lang";
 $sql78 = "SELECT * FROM radio WHERE rad_username='$cheat254'";
-$result78 = mysql_query($sql78) or die("Error 95!");
-if(mysql_num_rows($result78) == "0"){ echo "<div align=center class=critical>ERROR: We are sorry! You dont have a radio hosting or service. Please contact your hosting provider.</div>"; }
-while($row7=mysql_fetch_array($result78)){$active = $row7[active];}
+$result78 = mysqli_query($GLOBALS["___mysqli_ston"], $sql78) or die("Error 95!");
+if(mysqli_num_rows($result78) == "0"){ echo "<div align=center class=critical>ERROR: We are sorry! You dont have a radio hosting or service. Please contact your hosting provider.</div>"; }
+while($row7=mysqli_fetch_array($result78)){$active = $row7['active'];}
 if($active != "yes") {
 echo "<div align=center class=critical>ERROR</div>"; exit; }
 ?>
@@ -52,7 +52,7 @@ echo "<div align=center class=critical>ERROR</div>"; exit; }
         <li><a href='tools/autodj.php' target="mainFrame"><img src="images/autodjl.jpg" width="16" height="16" border="0" /> <?echo"$im11";?></a></li>
         <li><a href='tools/playlist_manager.php' target="mainFrame"><img src="images/playlistm.jpg" width="16" height="16" border="0" /> <?echo"$playlistml";?></a></li>
         <li><a href='tools/dj_manager.php' target="mainFrame"><img src="images/djmanager.jpg" width="16" height="16" border="0" /></a><a href='tools/dj_manager.php' target="mainFrame"> <?echo"$djman";?></a></li>
-		<li><a href='tools/adv_main.php' target="mainFrame"><img src="images/introz.jpg" width="16" height="16" border="0" /> <?echo"$client_intro";?></a></li>
+        <li><a href='tools/adv_main.php' target="mainFrame"><img src="images/introz.jpg" width="16" height="16" border="0" /> <?echo"$client_intro";?></a></li>
         <li><a href='tools/relay.php' target="mainFrame"><img src="images/relay.png" width="16" height="16" border="0" /> <?echo"$cpi13";?></a></li>
         <li><a href='tools/bw.php' target="mainFrame"><img src="images/band.jpg" width="16" height="16" border="0" /> <?echo"$bandl";?></a></li>
         <li><a href='tools/sonic_configuration.php' target="mainFrame"><img src="images/conf.jpg" width="16" height="16" border="0" /></a><a href='tools/sonic_configuration.php' target="mainFrame"> <?echo"<font color=0000FF>$sonic_config_client</font>";?></a></li>
